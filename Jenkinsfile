@@ -25,9 +25,9 @@ pipeline {
                  def customImage = docker.build('FrancisGo67890/cloudfreak', "./docker")
 
                  // Tag the image with version 3
-                 sh "docker tag francisgo67890/cloudfreak:latest registry.hub.docker.com/FrancisGo67890/cloudfreak:3"
+                 sh "docker tag francisgo67890/cloudfreak:latest registry.hub.docker.com/francisgo67890/cloudfreak:3"
                  // Push the tagged image
-                 sh "docker push registry.hub.docker.com/FrancisGo67890/cloudfreak:3"
+                 sh "docker push registry.hub.docker.com/francisgo67890/cloudfreak:3"
                  
            }
         }
