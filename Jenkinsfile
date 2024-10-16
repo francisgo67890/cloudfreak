@@ -24,9 +24,12 @@ pipeline {
                script {         
                  def customImage = docker.build('francisgo67890/petclinic', "./docker")
                  docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-                 customImage.push("${env.BUILD_NUMBER}")
+                 sh "docker tag francisgo67890/cloudfreak:latest registry.hub.docker.com/francis579/cloudfreak:3"
+                 sh "docker push registry.hub.docker.com/francis579/cloudfreak:3"
+
                  }   
-                 
+            
+     
            }
         }
 	  }
